@@ -182,3 +182,8 @@ contest_el.innerHTML +=
 `
 
 contests.appendChild(contest_el)
+
+// PAGE RELOADER
+setTimeout(() => {
+  document.location.reload();
+}, 10000);
