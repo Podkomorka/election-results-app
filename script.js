@@ -35,7 +35,7 @@ contest_el.innerHTML =
             <td>${absentee}</td>
             <td>${prov}</td>
             <td>${total_ballots}</td>
-            <td>${total_ballots} of ${reg_voters} (${(total_ballots / reg_voters) * 100}%)</td>
+            <td>${total_ballots} of ${reg_voters} (${((total_ballots / reg_voters) * 100).toFixed(2)}%)</td>
         </tr>
     </table>
 `
@@ -76,7 +76,7 @@ data.forEach(candidate => {
         <td>${candidate['Advance Voting_votes']}</td>
         <td>${candidate['Absentee by Mail_votes']}</td>
         <td>${candidate['Provisional_votes']}</td>
-        <td>${candidate['total_votes']} (${(candidate['total_votes'] / cand_total_votes) * 100}%)</td>
+        <td>${candidate['total_votes']} (${((candidate['total_votes'] / cand_total_votes) * 100).toFixed(2)}%)</td>
     `
     cand_table.appendChild(row)
 })
