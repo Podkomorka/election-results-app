@@ -4,7 +4,6 @@ const contests = document.getElementById('contests')
 
 // VARIABLES
 let contest_title = data[0].Contest_title
-let reported = data[0]['Reporting_flag']
 let reg_voters = data[0]['Reg_voters']
 let e_day = data[0]['Election Day_ballots']
 let advance_voting = data[0]['Advance Voting_ballots']
@@ -18,7 +17,6 @@ contest_el.classList.add('contest')
 contest_el.innerHTML = 
 `
     <h2>${contest_title} (Vote for 1)</h2>
-    <p>Precincts Reported: ${reported} of 1 (${(reported / 1) * 100}%)</p>
     <p style="font-weight: bold">Times Cast</p>
     <table>
         <tr>
